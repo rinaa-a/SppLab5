@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SppLab5", "SppLab5\SppLab5.csproj", "{6CC8AD19-A822-495D-9BFE-5D35151401DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SppLab5", "SppLab5\SppLab5.csproj", "{6CC8AD19-A822-495D-9BFE-5D35151401DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject", "NUnitTestProject\NUnitTestProject.csproj", "{050C5A0A-6517-4625-8AB5-DD12A2B5E98B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6CC8AD19-A822-495D-9BFE-5D35151401DE} = {6CC8AD19-A822-495D-9BFE-5D35151401DE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{6CC8AD19-A822-495D-9BFE-5D35151401DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CC8AD19-A822-495D-9BFE-5D35151401DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CC8AD19-A822-495D-9BFE-5D35151401DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{050C5A0A-6517-4625-8AB5-DD12A2B5E98B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{050C5A0A-6517-4625-8AB5-DD12A2B5E98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{050C5A0A-6517-4625-8AB5-DD12A2B5E98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{050C5A0A-6517-4625-8AB5-DD12A2B5E98B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,11 +11,11 @@ namespace SppLab5
             dependencies = new Dictionary<Type, List<ImplementationInfo>>();
         }
 
-        public void Register<TDependency, TImplementation>(Lifetime lifetime = Lifetime.Transient)
+        public void Register<TDependency, TImplementation>(Lifetime lifetime = Lifetime.Transient, ServiceImplementations implementation = ServiceImplementations.None)
             where TDependency : class
             where TImplementation : TDependency
         {
-            var newImplInfo = new ImplementationInfo(typeof(TImplementation), lifetime);
+            var newImplInfo = new ImplementationInfo(typeof(TImplementation), lifetime, implementation);
             if (!dependencies.ContainsKey(typeof(TDependency)))
             {
                 dependencies.Add(typeof(TDependency), new List<ImplementationInfo>());
@@ -24,9 +24,9 @@ namespace SppLab5
             dependencies[typeof(TDependency)].Add(newImplInfo);
         }
 
-        public void Register(Type dependency, Type implementation, Lifetime lifetime = Lifetime.Transient)
+        public void Register(Type dependency, Type implementationType, Lifetime lifetime = Lifetime.Transient, ServiceImplementations implementation = ServiceImplementations.None)
         {
-            var newImplInfo = new ImplementationInfo(implementation, lifetime);
+            var newImplInfo = new ImplementationInfo(implementationType, lifetime, implementation);
             if (!dependencies.ContainsKey(dependency))
             {
                 dependencies.Add(dependency, new List<ImplementationInfo>());
